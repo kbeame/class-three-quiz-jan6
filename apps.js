@@ -68,8 +68,16 @@ var answer4 = prompt("How many countries is Kat a citizen of?");
     alert("You now have " +counter + "/5 answers correct.");
     }
   else {
-    alert("Hm... I'm not sure you understood the question " + userName + ". Anyway... moving on.")
+    alert("Hm... I'm not sure you understood the question " + userName + ". Anyway... moving on.");
     alert("You now have " +counter + "/5 answers correct.");
   }
-
+//Question Five//
+if (parseInt(answer5) !== 19) {
+  while (parseInt(answer5) !== 19) {
+    var answer5 = prompt("Last question, " + userName + "! Many teeth has Kat had pulled? Please answer with an integer.");
+  }
+  else {
+    counter += 1;
+    alert("You now have " +counter + "/5 answers correct.");
+  }
 }
