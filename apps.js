@@ -76,6 +76,7 @@ if (parseInt(answer5) !== 19) {
   while (parseInt(answer5) !== 19) {
     var answer5 = prompt("Last question, " + userName + "! Many teeth has Kat had pulled? Please answer with an integer.");
   }
+}
   else {
     counter += 1;
     alert("You now have " +counter + "/5 answers correct.");
