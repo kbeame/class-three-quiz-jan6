@@ -72,13 +72,16 @@ var answer4 = prompt("How many countries is Kat a citizen of?");
     alert("You now have " +counter + "/5 answers correct.");
   }
 //Question Five//
-if (parseInt(answer5) !== 19) {
-  while (parseInt(answer5) !== 19) {
-    var answer5 = prompt("Last question, " + userName + "! Many teeth has Kat had pulled? Please answer with an integer.");
-  }
+var answer5 = prompt("Last question, " + userName + "! How many teeth has Kat had pulled? Please answer with an integer.");
+
+if (parseInt(answer5) === 19) {
+  counter += 1;
+  alert("Correct! Your final score is " +counter + "/5 answers correct!");
 }
   else {
-    counter += 1;
-    alert("You now have " +counter + "/5 answers correct.");
+    while (parseInt(answer5) !== 19) {
+      var answer5 = prompt("Try again, " + userName + "! Many teeth has Kat had pulled? Please answer with an integer.");
+    alert("Sorry no... Your final score is " +counter + "/5 answers correct.");
   }
+}
 }
