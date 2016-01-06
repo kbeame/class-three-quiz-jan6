@@ -4,7 +4,8 @@ console.log("The user\'s name is " +userName+ ".");
 
 //Are they ready to play?//
 var ready = prompt("Hello "+ userName + "! Are you ready to begin the KAT QUIZ? Yes or No");
-  if (ready.toUpperCase() !== "YES") {
+  if (ready.toUpperCase() !== "YES" || ready.toUpperCase() !== "YEA"
+  || ready.toUpperCase() !== "YEAH") {
     alert("I\'m glad you recognize that you aren\'t ready. Study up on Kat and come back.");
     }
   else {
@@ -13,8 +14,10 @@ var ready = prompt("Hello "+ userName + "! Are you ready to begin the KAT QUIZ? 
 //Begin Quiz//
 console.log(userName);
 //Question One//
-var answer1 = prompt("Does Kat love pumpkins or pumpkin spice lattes?");
-  if (answer1.toUpperCase() === "PUMPKINS") {
+var answer1 = prompt("Does Kat love pumpkins more than pumpkin spice lattes? Please answer Yes or No.");
+  if (answer1.toUpperCase() === "YES" || answer1.toUpperCase() === "Y"
+  || answer1.toUpperCase() === "YEA" || answer1.toUpperCase() === "YEAH")
+  {
     alert("Correct " + userName + "! Pumpkins themselves are far superior in Kat\'s eyes.");
     }
   else {
@@ -22,7 +25,8 @@ var answer1 = prompt("Does Kat love pumpkins or pumpkin spice lattes?");
       }
 //Question Two//
 var answer2 = prompt("Is Kat a Canadian Citizen. Yes or No?");
-  if (answer2.toUpperCase() === "YES") {
+  if (answer2.toUpperCase() === "YES" || answer2.toUpperCase() === "Y"
+  || answer2.toUpperCase() === "YEA" || answer2.toUpperCase() === "YEAH") {
     alert("Right you are " + userName + "! Kat loves Nanimo Bars.");
       }
   else {
@@ -30,7 +34,8 @@ var answer2 = prompt("Is Kat a Canadian Citizen. Yes or No?");
       }
 //Question Three//
 var answer3 = prompt("Is Kat an American Citizen. Yes or No?");
-  if (answer3.toUpperCase() === "YES") {
+  if (answer3.toUpperCase() === "YES" || answer3.toUpperCase() === "Y" ||
+      answer3.toUpperCase() === "YEA" || answer3.toUpperCase() === "YEAH") {
     alert("Right you are " + userName + "! Kat loves eagles. Yum.");
     }
   else {
@@ -39,14 +44,15 @@ var answer3 = prompt("Is Kat an American Citizen. Yes or No?");
 //Question Four//
 
 var answer4 = prompt("How many countries is Kat a citizen of?");
-  if (parseInt(answer4) === 3) {
+  if (parseInt(answer4) === 3 || answer4 === "3" || answer4.toUpperCase() === "THREE") {
     alert("Yes " + userName + "! USA, CANADA and UK!");
     }
-  else if (parseInt(answer4) > 3) {
-    alert("Too high, " + userName + ".");
+  else if (parseInt(answer4) < 3 || answer4 === "2" || answer4 === "1"
+          || answer4.toUpperCase() === "ONE" || answer4.toUpperCase() === "TWO") {
+    alert("Too low, " + userName + ". The correct answer is 3. USA, CANADA and UK!");
     }
   else {
-    alert("Too low, " + userName + ".");
+    alert("Too high, " + userName + ". The correct answer is 3. USA, CANADA and UK!");
     }
 
 }
