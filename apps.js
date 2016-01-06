@@ -3,9 +3,8 @@ var userName = prompt('What is your name?');
 console.log("The user\'s name is " +userName+ ".");
 
 //Are they ready to play?//
-var ready = prompt("Hello "+ userName + "! Are you ready to begin the KAT QUIZ? Yes or No");
-  if (ready.toUpperCase() !== "YES" || ready.toUpperCase() !== "YEA"
-  || ready.toUpperCase() !== "YEAH") {
+var ready = prompt("Hello "+ userName + "! Are you ready to begin the KAT QUIZ? Please answer Y or N");
+  if (ready.toUpperCase() !== "Y") {
     alert("I\'m glad you recognize that you aren\'t ready. Study up on Kat and come back.");
     }
   else {
@@ -51,8 +50,12 @@ var answer4 = prompt("How many countries is Kat a citizen of?");
           || answer4.toUpperCase() === "ONE" || answer4.toUpperCase() === "TWO") {
     alert("Too low, " + userName + ". The correct answer is 3. USA, CANADA and UK!");
     }
-  else {
+  else if (parseInt(answer4 > 3 || answer4 === "4" || answer4 === "5"
+          || answer4.toUpperCase() === "FOUR" || answer4.toUpperCase() === "FIVE") {
     alert("Too high, " + userName + ". The correct answer is 3. USA, CANADA and UK!");
     }
+  else {
+    alert("Hm... I'm not sure you understood the question " + userName + ".")
+  }
 
 }
