@@ -32,68 +32,71 @@ else {
 }
 question1();
 //Question Two//
+var display2 = document.getElementById('r2');
 function question2() {
 var answer2 = prompt("Is Kat a Canadian Citizen. Yes or No?");
 if (answer2.toUpperCase() === "YES" || answer2.toUpperCase() === "Y"
   || answer2.toUpperCase() === "YEA" || answer2.toUpperCase() === "YEAH") {
-  alert("Right you are " + userName + "! Kat loves Nanimo Bars.");
+  display2.textContent = "Right you are " + userName + "! Kat loves Nanimo Bars.";
   counter += 1;
   alert("You now have " +counter + "/5 answers correct.");
   }
 else {
-  alert("HEY! " + userName + "! You shouldn\'t judge a book by its cover!");
+  display2.textContent = "HEY! " + userName + "! You shouldn\'t judge a book by its cover!";
   alert("You now have " +counter + "/5 answers correct.");
   }
 }
 question2();
 //Question Three//
+var display3 = document.getElementById('r3');
 function question3() {
 var answer3 = prompt("Is Kat an American Citizen. Yes or No?");
 if (answer3.toUpperCase() === "YES" || answer3.toUpperCase() === "Y" ||
     answer3.toUpperCase() === "YEA" || answer3.toUpperCase() === "YEAH") {
-  alert("Right you are " + userName + "! Kat loves eagles. Yum.");
+  display3.textContent = "Right you are " + userName + "! Kat loves eagles. Yum.";
   counter += 1;
   alert("You now have " +counter + "/5 answers correct.");
   }
 else {
-  alert("..." + userName + ", please don\'t tell Donald Trump... JUST KIDDING! Trump can suck it. Kat\'s American.");
+  display3.textContent = "..." + userName + ", please don\'t tell Donald Trump... JUST KIDDING! Trump can suck it. Kat\'s American.";
   alert("You now have " +counter + "/5 answers correct.");
       }
     }
 question3();
 //Question Four//
+var display4 = document.getElementById('r4');
 function question4() {
 var answer4 = prompt("How many countries is Kat a citizen of?");
 if (parseInt(answer4) === 3 || answer4 === "3" || answer4.toUpperCase() === "THREE") {
-  alert("Yes " + userName + "! USA, CANADA and UK!");
+  display4.textContent = "Yes " + userName + "! USA, CANADA and UK!";
   counter += 1;
   alert("You now have " +counter + "/5 answers correct.");
   }
 else if (parseInt(answer4) < 3 || answer4 === "2" || answer4 === "1"
         || answer4.toUpperCase() === "ONE" || answer4.toUpperCase() === "TWO") {
-  alert("Too low, " + userName + ". The correct answer is 3. USA, CANADA and UK!");
+  display4.textContent = "Too low, " + userName + ". The correct answer is 3. USA, CANADA and UK!";
   alert("You now have " +counter + "/5 answers correct.");
   }
 else if (parseInt(answer4) > 3) {
-  alert("Too high, " + userName + ". The correct answer is 3. USA, CANADA and UK!");
+  display4.textContent = "Too high, " + userName + ". The correct answer is 3. USA, CANADA and UK!";
   alert("You now have " +counter + "/5 answers correct.");
   }
 else {
-  alert("Hm... I'm not sure you understood the question " + userName + ". Anyway... moving on.");
+  display4.textContent = "Hm... I'm not sure you understood the question " + userName + ". Anyway... moving on.";
   alert("You now have " +counter + "/5 answers correct.");
   }
 }
 question4();
 //Question Five//
+var display5 = document.getElementById('r5');
 function question5() {
 var teeth = false;
-var answer5 = prompt("Last question, " + userName + "! How many teeth has Kat had pulled? Please answer with an integer.");
 while (teeth === false){
-  answer5 = prompt("Try again, " + userName + "! Many teeth has Kat had pulled? Please answer with an integer.");
+  var answer5 = prompt("Last question, " + userName + "! Many teeth has Kat had pulled? Please answer with an integer.");
   if (parseInt(answer5) === 19) {
   teeth = true;
   counter += 1;
-  alert("Correct! Your final score is " + counter + "/5! Have a nice day " +userName +"!");
+  display5.textContent = "Correct! Your final score is " + counter + "/5! Have a nice day " +userName +"!";
   }
   else if (parseInt(answer5) < 19) {
     alert("Too low!");
