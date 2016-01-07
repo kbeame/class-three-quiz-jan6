@@ -15,17 +15,18 @@ var ready = prompt("Hello "+ userName + "! Are you ready to begin the KAT QUIZ? 
 console.log(userName);
 var counter = 0;
 //Question One//
+var display1 = document.getElementById('r1');
 function question1(){
 var answer1 = prompt("Does Kat love pumpkins more than pumpkin spice lattes? Please answer Yes or No.");
 if (answer1.toUpperCase() === "YES" || answer1.toUpperCase() === "Y"
 || answer1.toUpperCase() === "YEA" || answer1.toUpperCase() === "YEAH")
 {
-  alert("Correct " + userName + "! Pumpkins themselves are far superior in Kat\'s eyes.");
+  display1.textContent = "Correct " + userName + "! Pumpkins themselves are far superior in Kat\'s eyes.";
   counter += 1;
   alert("You now have " +counter + "/5 answers correct.");
 }
 else {
-  alert("Bullocks " + userName + ". You should be ashamed of yourself.");
+  display1.textContent = ("Bullocks " + userName + ". You should be ashamed of yourself.");
   alert("You now have " +counter + "/5 answers correct.");
 }
 }
