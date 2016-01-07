@@ -15,19 +15,23 @@ var ready = prompt("Hello "+ userName + "! Are you ready to begin the KAT QUIZ? 
 console.log(userName);
 var counter = 0;
 //Question One//
+function question1(){
 var answer1 = prompt("Does Kat love pumpkins more than pumpkin spice lattes? Please answer Yes or No.");
-  if (answer1.toUpperCase() === "YES" || answer1.toUpperCase() === "Y"
-  || answer1.toUpperCase() === "YEA" || answer1.toUpperCase() === "YEAH")
-  {
-    alert("Correct " + userName + "! Pumpkins themselves are far superior in Kat\'s eyes.");
-    counter += 1;
-    alert("You now have " +counter + "/5 answers correct.");
-    }
-  else {
-    alert("Bullocks " + userName + ". You should be ashamed of yourself.");
-    alert("You now have " +counter + "/5 answers correct.");
-      }
+if (answer1.toUpperCase() === "YES" || answer1.toUpperCase() === "Y"
+|| answer1.toUpperCase() === "YEA" || answer1.toUpperCase() === "YEAH")
+{
+  alert("Correct " + userName + "! Pumpkins themselves are far superior in Kat\'s eyes.");
+  counter += 1;
+  alert("You now have " +counter + "/5 answers correct.");
+}
+else {
+  alert("Bullocks " + userName + ". You should be ashamed of yourself.");
+  alert("You now have " +counter + "/5 answers correct.");
+}
+}
+question1();
 //Question Two//
+function question2() {
 var answer2 = prompt("Is Kat a Canadian Citizen. Yes or No?");
 if (answer2.toUpperCase() === "YES" || answer2.toUpperCase() === "Y"
   || answer2.toUpperCase() === "YEA" || answer2.toUpperCase() === "YEAH") {
@@ -39,7 +43,10 @@ else {
   alert("HEY! " + userName + "! You shouldn\'t judge a book by its cover!");
   alert("You now have " +counter + "/5 answers correct.");
   }
+}
+question2();
 //Question Three//
+function question3() {
 var answer3 = prompt("Is Kat an American Citizen. Yes or No?");
 if (answer3.toUpperCase() === "YES" || answer3.toUpperCase() === "Y" ||
     answer3.toUpperCase() === "YEA" || answer3.toUpperCase() === "YEAH") {
@@ -51,8 +58,10 @@ else {
   alert("..." + userName + ", please don\'t tell Donald Trump... JUST KIDDING! Trump can suck it. Kat\'s American.");
   alert("You now have " +counter + "/5 answers correct.");
       }
+    }
+question3();
 //Question Four//
-
+function question4() {
 var answer4 = prompt("How many countries is Kat a citizen of?");
 if (parseInt(answer4) === 3 || answer4 === "3" || answer4.toUpperCase() === "THREE") {
   alert("Yes " + userName + "! USA, CANADA and UK!");
@@ -72,7 +81,10 @@ else {
   alert("Hm... I'm not sure you understood the question " + userName + ". Anyway... moving on.");
   alert("You now have " +counter + "/5 answers correct.");
   }
+}
+question4();
 //Question Five//
+function question5() {
 var teeth = false;
 var answer5 = prompt("Last question, " + userName + "! How many teeth has Kat had pulled? Please answer with an integer.");
 while (teeth === false){
@@ -92,3 +104,5 @@ while (teeth === false){
   }
   }
 }
+}
+question5();
