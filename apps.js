@@ -116,19 +116,20 @@
 // question5();
 
 //Question Six//
+var display6 = document.getElementById('r6');
 var isCorrect = false;
 var answer6 = prompt("Please state the first name of a main West Wing character");
 var westWing = ["JOSH", "SAM", "CJ", "TOBY", "DONNA", "ABBY", "ZOE", "JOSIAH", "LEO", "CHARLIE", "WILL", "DANNY"];
 //for loop
 function question6() {
 for (var i = 0; i < westWing.length; i++) {
-  if (answer6 == westWing[i]) {
-  alert("Good Job!")
-  console.log(answer6 + " is from the West Wing!");
-  isCorrect = true;
-  break;
-}
-}
+  if (answer6.toUpperCase() == westWing[i]) {
+    alert("Good Job!")
+    display6.textContent = answer6 + " is from the West Wing!";
+    isCorrect = true;
+//  break;
+    }
+  }
 if (isCorrect == false) {
   alert("you suck");
 }
