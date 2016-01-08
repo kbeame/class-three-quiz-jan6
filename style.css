@@ -1,0 +1,15 @@
+.right {
+  color: green;
+}
+
+.wrong {
+  color: red;
+}
+
+* {
+  background-color: #FF7F50;
+}
+
+h1, h2 {
+  color:  #333300;
+}
