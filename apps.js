@@ -9,6 +9,7 @@ var score4 = document.getElementById('s4');
 var display4 = document.getElementById('r4');
 var display5 = document.getElementById('r5');
 var display6 = document.getElementById('r6');
+var score6 = document.getElementById('s6');
 
 // //Find out their name//
 var userName = prompt('What is your name?');
@@ -57,75 +58,76 @@ question5();
 
 
 function question4() {
-var answer4 = prompt("How many countries is Kat a citizen of?");
-if (parseInt(answer4) === 3 || answer4 === "3" || answer4.toUpperCase() === "THREE") {
-  display4.textContent = "Yes " + userName + "! USA, CANADA and UK!";
-  counter += 1;
-  score4.textContent = "You now have " +counter + "/5 answers correct.";
-  display4.className = 'right'
-  }
-else if (parseInt(answer4) < 3 || answer4 === "2" || answer4 === "1"
+  var answer4 = prompt("How many countries is Kat a citizen of?");
+  if (parseInt(answer4) === 3 || answer4 === "3" || answer4.toUpperCase() === "THREE") {
+    display4.textContent = "Yes " + userName + "! USA, CANADA and UK!";
+    counter += 1;
+    score4.textContent = "You now have " +counter + "/5 answers correct.";
+    display4.className = 'right'
+    }
+    else if (parseInt(answer4) < 3 || answer4 === "2" || answer4 === "1"
         || answer4.toUpperCase() === "ONE" || answer4.toUpperCase() === "TWO") {
-  display4.textContent = "Too low, " + userName + ". The correct answer is 3. USA, CANADA and UK!";
-  display4.className = 'wrong'
-  score4.textContent = "You now have " +counter + "/5 answers correct.";
-  }
-else if (parseInt(answer4) > 3) {
-  display4.textContent = "Too high, " + userName + ". The correct answer is 3. USA, CANADA and UK!";
-  display4.className = "wrong"
-  score4.textContent = "You now have " +counter + "/5 answers correct.";
-  }
-else {
-  display4.textContent = "Hm... I'm not sure you understood the question " + userName + ". Anyway... moving on.";
-  display4.className = "wrong"
-  score4.textContent = "You now have " +counter + "/5 answers correct.";
-  }
-}
+          display4.textContent = "Too low, " + userName + ". The correct answer is 3. USA, CANADA and UK!";
+          display4.className = 'wrong'
+          score4.textContent = "You now have " +counter + "/5 answers correct.";
+        }
+        else if (parseInt(answer4) > 3) {
+          display4.textContent = "Too high, " + userName + ". The correct answer is 3. USA, CANADA and UK!";
+          display4.className = "wrong"
+          score4.textContent = "You now have " +counter + "/5 answers correct.";
+        }
+        else {
+          display4.textContent = "Hm... I'm not sure you understood the question " + userName + ". Anyway... moving on.";
+          display4.className = "wrong"
+          score4.textContent = "You now have " +counter + "/5 answers correct.";
+        }
+      }
 //Question Five//
 function question5() {
-var teeth = false;
-while (teeth === false){
-  var answer5 = prompt("Last question, " + userName + "! Many teeth has Kat had pulled? Please answer with an integer.");
-  if (parseInt(answer5) === 19) {
-  teeth = true;
-  counter += 1;
-  display5.textContent = "Correct! Your final score is " + counter + "/5!" +userName +"!";
-  display5.className = "right"
+  var teeth = false;
+  while (teeth === false){
+    var answer5 = prompt("Last question, " + userName + "! Many teeth has Kat had pulled? Please answer with an integer.");
+    if (parseInt(answer5) === 19) {
+      teeth = true;
+      counter += 1;
+      display5.textContent = "Correct! Your final score is " + counter + "/5! " +userName +"!";
+      display5.className = "right"
+    }
+      else if (parseInt(answer5) < 19) {
+        alert("Too low!");
+        teeth = false;
+        display5.className = "wrong";
+      }
+      else {
+        alert("Too high! I am not a shark.");
+        teeth = false
+        display5.className = "wrong";
+      }
+    }
   }
-  else if (parseInt(answer5) < 19) {
-    alert("Too low!");
-    teeth = false;
-    display5.className = "wrong";
-  }
-  else {
-    alert("Too high! I am not a shark.");
-    teeth = false
-    display5.className = "wrong";
-  }
-  }
-}
-var counter2 = 0;
 //Question Six//
 var isCorrect = false;
 var answer6 = prompt("BONUS QUESTION: Please state the first name of a main West Wing character");
 var westWing = ["JOSH", "SAM", "CJ", "TOBY", "DONNA", "ABBY", "ZOE", "JOSIAH", "LEO", "CHARLIE", "WILL", "DANNY"];
+var counter1= counter;
+var counter2 = 0;
 //for loop
 function question6() {
-for (var i = 0; i < westWing.length; i++) {
-  if (answer6.toUpperCase() == westWing[i]) {
-    alert("Good Job!")
-    display6.textContent = answer6 + " is from the West Wing!";
-    display6.className = "right";
-    isCorrect = true;
-    counter1 =+ 5;
-    alert('You got an additional' + counter1 + ' For a total point count of ' +(counter+counter2) + '!')
+  for (var i = 0; i < westWing.length; i++) {
+    if (answer6.toUpperCase() == westWing[i]) {
+      alert("Good Job!")
+      display6.textContent = answer6 + " is from the West Wing!";
+      display6.className = "right";
+      isCorrect = true;
+      counter2 =+ 5;
+      score6.textContent ='You got an additional ' + counter2 + ' For a total point count of ' + (counter1 + counter2) + '!';
 //  break;
+      }
+    }
+    if (isCorrect == false) {
+      display6.textContent = 'WATCH THE WEST WING!';
+      display6.className = "wrong";
     }
   }
-if (isCorrect == false) {
-  display6.textContent = 'WATCH THE WEST WING!';
-  display6.className = "wrong";
-}
-}
 question6();
 }
